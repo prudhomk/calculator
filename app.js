@@ -1,23 +1,17 @@
 // grab DOM elements
-const value1 = document.getElementById('x');
-const value2 = document.getElementById('y');
-const solutionDisplay = document.getElementById('solution');
+const num1 = parseInt(document.getElementById('x1'));
+const num2 = parseInt(document.getElementById('y1'));
+const addButton = document.getElementById('add');
+const additionDisplay = parseInt(document.getElementById('solutionAdd'));
 
 // set event listeners to update state and DOM
 
-add.addEventListener('click', () => {
-	const solution = x.value + y.value;
-	solutionDisplay.text = sum;
-
+addButton.addEventListener('click', () => {
+    parseInt(additionDisplay.textContent) = num1.value + num2.value;
+    num1 = '';
+    num2 = '';
 });
 
-let sum = (x.value, y.value) => }
-	return x + y;
-};
 
-add.addEventListerner('click', () => {
-	typeof(Number(value1.value))  solution || typeof(Number(vaule2.value)) === solution) {
 
-})
 
-solutionDisplay.value = 
