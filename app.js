@@ -1,13 +1,15 @@
-// import functions and grab DOM elements
-const firstInput = document.getElementById('first-input');
-const secondInput = document.getElementById('second-input');
-const changeButton = document.getElementById('calculate');
+// grab DOM elements
+const x = document.getElementById('first-input');
+const y = document.getElementById('second-input');
 const solutionDisplay = document.getElementById('solution');
 
+const calculator = document.querySelector('.calculator');
+const keys = calculator.querySelector('.calculator__keys')
 
-// initialize state
-changeButton.addEventListener('compute', () => {
-	valueDisplay.content = solution.value;
-});
 // set event listeners to update state and DOM
-console.log('hello');
+
+changeButton.addEventListener('click', () => {
+	const solution = x.value + y.value;
+	solutionDisplay.text = sum;
+
+});
