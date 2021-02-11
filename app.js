@@ -1,3 +1,5 @@
+import { add, sub, mult, div } from './utilities.js';
+
 // Addition
 
 const num1 = document.getElementById('x1');
@@ -30,8 +32,7 @@ const divisionDisplay = document.getElementById('solutionDiv');
 //Addition
 
 addButton.addEventListener('click', () => {
-    const sum = Number(num1.value) + Number(num2.value);
-    console.log(sum);
+    const sum = add(Number(num1.value), Number(num2.value));
     additionDisplay.textContent = sum;
     
 });
@@ -39,17 +40,15 @@ addButton.addEventListener('click', () => {
 //Subtraction
 
 subButton.addEventListener('click', () => {
-    const sum2 = Number(num3.value) - Number(num4.value);
-    console.log(sum2);
-    subtractionDisplay.textContent = sum2;
+    const sum = sub(Number(num3.value), Number(num4.value));
+    subtractionDisplay.textContent = sum;
     
 });
 
 //Multiplication
 
 multButton.addEventListener('click', () => {
-    const sum3 = Number(num5.value) * Number(num6.value);
-    console.log(sum3);
+    const sum3 = mult(Number(num5.value), Number(num6.value));
     multiplicationDisplay.textContent = sum3;
     
 });
@@ -57,8 +56,8 @@ multButton.addEventListener('click', () => {
 //Division
 
 divButton.addEventListener('click', () => {
-    const sum4 = Number(num7.value) / Number(num8.value);
-    console.log(sum4);
+    const sum4 = div(Number(num7.value), Number(num8.value));
     divisionDisplay.textContent = sum4;
     
 });
+
