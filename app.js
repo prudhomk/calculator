@@ -1,63 +1,19 @@
 import { add, sub, mult, div } from './utilities.js';
 
-// Addition
+function initOperator(firstInputId, secondInputId, buttonId, resultsId, calculation) {
+    const num1 = document.getElementById(firstInputId);
+    const num2 = document.getElementById(secondInputId);
+    const button = document.getElementById(buttonId);
+    const display = document.getElementById(resultsId);
 
-const num1 = document.getElementById('x1');
-const num2 = document.getElementById('y1');
-const addButton = document.getElementById('add');
-const additionDisplay = document.getElementById('solutionAdd');
-
-// Subtraction
-
-const num3 = document.getElementById('x2');
-const num4 = document.getElementById('y2');
-const subButton = document.getElementById('subtract');
-const subtractionDisplay = document.getElementById('solutionSub');
-
-// Multiplication
-
-const num5 = document.getElementById('x3');
-const num6 = document.getElementById('y3');
-const multButton = document.getElementById('multiply');
-const multiplicationDisplay = document.getElementById('solutionMult');
-
-// Division
-
-const num7 = document.getElementById('x4');
-const num8 = document.getElementById('y4');
-const divButton = document.getElementById('divide');
-const divisionDisplay = document.getElementById('solutionDiv');
-// set event listeners to update state and DOM
-
-//Addition
-
-addButton.addEventListener('click', () => {
-    const sum = add(Number(num1.value), Number(num2.value));
-    additionDisplay.textContent = sum;
+    button.addEventListener('click', () => {
+        const result = calculation(Number(num1.value), Number(num2.value));
+        display.textContent = result;
     
-});
+    });
+}
 
-//Subtraction
-
-subButton.addEventListener('click', () => {
-    const sum = sub(Number(num3.value), Number(num4.value));
-    subtractionDisplay.textContent = sum;
-    
-});
-
-//Multiplication
-
-multButton.addEventListener('click', () => {
-    const sum3 = mult(Number(num5.value), Number(num6.value));
-    multiplicationDisplay.textContent = sum3;
-    
-});
-
-//Division
-
-divButton.addEventListener('click', () => {
-    const sum4 = div(Number(num7.value), Number(num8.value));
-    divisionDisplay.textContent = sum4;
-    
-});
-
+initOperator('x1', 'y1', 'add', 'solutionAdd', add);
+initOperator('x2', 'y2', 'subtract', 'solutionSub', sub);
+initOperator('x3', 'y3', 'multiply', 'solutionMult', mult);
+initOperator('x4', 'y4', 'divide', 'solutionDiv', div);
